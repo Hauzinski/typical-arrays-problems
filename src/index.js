@@ -3,9 +3,9 @@ exports.min = function min(array) {
         return 0;
     }
     let count = array[0];
-    for (i = 0; i < array.length; i++) {
-        if (array[i] < count) {
-            count = array[i];
+    for (let value of array) {
+        if (value < count) {
+            count = value;
         }
     }
     return count;
@@ -16,9 +16,9 @@ exports.max = function max(array) {
         return 0;
     }
     let count = array[0];
-    for (i = 0; i < array.length; i++) {
-        if (array[i] > count) {
-            count = array[i];
+    for (let value of array) {
+        if (value > count) {
+            count = value;
         }
     }
     return count;
@@ -29,9 +29,8 @@ exports.avg = function avg(array) {
         return 0;
     }
     let sum = 0;
-    let count = array.length;
-    for (i = 0; i < array.length; i++) {
-        sum += array[i];
+    for (let value of array) {
+        sum += value;
     }
-    return sum / count;
+    return sum / array.length;
 };
